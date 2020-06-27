@@ -1,0 +1,50 @@
+.item-purchase-confirmation {
+  // height: 15rem;
+
+  &__image-and-name {
+    align-items: center;
+
+    img {
+      height: 420px;
+      width: 420px;
+      margin-right: 1rem;
+    }
+
+    &--name {
+      font-weight: bold;
+      text-align: center;
+      font-size: 30px;
+      padding-top: 15px;
+
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: flex-end;
+    vertical-align: text-bottom;
+
+    &--yen {
+      font-weight: bold;
+      margin-right: 1rem;
+      
+    }
+
+    &--fee {
+      font-size: 20px;
+    }
+  }
+}
+
+#amount {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#card-data {
+  padding: 2rem;
+}

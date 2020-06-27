@@ -1,0 +1,76 @@
+- breadcrumb :item_show, @item
+= render "layouts/breadcrumbs"
+.block.horizontal-padding-25
+  .block__menu
+    = @item.name
+  .item-show
+    .item-show__images-data
+      .item-images
+        .item-images__main
+          = render partial: 'layouts/sold_out', locals:{item: @item}
+          = image_tag @item.item_images[0].image.url
+        .item-images__mini-images
+          -# = @item.item_images.each do |item_image|
+          -# ミスってこう記述すると、情報が全部でちゃう。
+          - @item.item_images.each do |item_image|
+            = image_tag item_image.image.url
+      %table.item-data
+        %tr.item-data__row
+          %th.item-data__row--title
+            出品者
+          %td.item-data__row--value
+            = @item.user.nickname
+        %tr.item-data__row
+          %th.item-data__row--title
+            カテゴリ
+          %td.item-data__row--value
+            = link_to @item.category.root.name
+            %br
+            = link_to ">#{@item.category.parent.name}"
+            %br
+            = link_to ">#{@item.category.name}"
+        %tr.item-data__row
+          %th.item-data__row--title
+            商品の状態
+          %td.item-data__row--value
+            = @item.condition_i18n
+        %tr.item-data__row
+          %th.item-data__row--title
+            配送料の負担
+          %td.item-data__row--value
+            = @item.delivery_fee_payer_i18n
+        %tr.item-data__row
+          %th.item-data__row--title
+            配送の方法
+          %td.item-data__row--value
+            = @item.delivery_method_i18n
+        %tr.item-data__row
+          %th.item-data__row--title
+            配送元地域
+          %td.item-data__row--value
+            = @item.prefecture.name
+        %tr.item-data__row
+          %th.item-data__row--title
+            発送日の目安
+          %td.item-data__row--value
+            = @item.delivery_days_i18n
+    .item-show__detail
+      = simple_format @item.detail
+
+    .item-show__price
+      .item-show__price--left
+        = "¥#{@item.price.to_s(:delimited)}"
+      .item-show__price--middle
+        （税込）
+      .item-show__price--right
+        = @item.delivery_fee_payer_i18n
+    = link_to new_item_purchases_path(@item) do
+      .button.back-main_color
+        購入画面に進む
+    - if user_signed_in? && @item.user_id == current_user.id
+      = link_to edit_item_path(@item) do
+        .button.back-gray
+          商品を編集する
+      = link_to item_path(@item), method: :delete do
+        .button.back-gray
+          商品を削除する

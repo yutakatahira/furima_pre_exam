@@ -1,0 +1,30 @@
+.mypage-side-bar {
+  width: 28rem;
+  margin-right: 2rem;
+
+}
+.mypage-side-bar-lists {
+  margin-bottom: 2rem;
+
+  &__top {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__list {
+    background-color: $white;
+    padding: 1rem;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+
+    &--right {
+      color: #ccc;
+    }
+  }
+}
+
+.side-bar-bottom {
+  width: 100%;
+}
+

@@ -1,0 +1,8 @@
+- breadcrumb :category_show, @category
+= render "layouts/breadcrumbs"
+.items-wrapper.horizontal-padding-20
+  .items-wrapper__title
+    = "#{@category.name}の商品一覧"
+  .productLists
+    = render @items
+  -# = paginate(@items)

@@ -1,0 +1,155 @@
+.main
+  %section.mainVisual
+    .content
+      %h2.content__subtitle
+        <br>人生を変えるフリマアプリ
+      %p.content__text
+        FURIMAはだれでもかんたんに出品・購入できる
+        %br
+        フリマアプリです
+      .content__btn
+        = link_to "https://tech-camp.in/expert" do
+          = image_tag 'app-store.svg',class: "img3"
+        = link_to "https://tech-camp.in/expert" do
+          = image_tag 'google-play.svg',class: "img3"
+  %section.topIntroduction.fadein
+    %h2.subtitle
+      FURIMAが選ばれる3つの理由
+    %ul.lists
+      %li.list
+        .list__pict
+          %span.number
+            1
+          = image_tag 'pict-reason-01.jpg'
+        %h3.list__text
+          %span 3分
+          ですぐに出品
+        %p.list__description
+          スマホで入力するだけで簡単に出品できる！
+      %li.list
+        .list__pict
+          %span.number
+            2
+          = image_tag 'pict-reason-02.jpg'
+        %h3.list__text
+          %span シンプル
+          で使いやすい
+        %p.list__description
+          めんどくさい入力は必要なく、検索も購入もスムーズ！
+      %li.list.list--last
+        .list__pict
+          %span.number
+            3
+          = image_tag 'pict-reason-03.jpg'
+        %h3.list__text
+          手数料
+          %span 業界最安
+        %p.list__description
+          最大3%でお得に出品&購入！
+  %section.topMiddleDl
+    .topMiddleDl__inner
+      %h2.subtitle
+        会員数日本一！
+      %p.text
+        FURIMAは、フリマアプリで最も人気。<br>
+        出品・購入回数も業界最多です！<br>
+        ほしかったあの商品に出会えるかもしれません。
+      .btn
+        = link_to "https://tech-camp.in/expert" do
+          = image_tag 'app-store.svg',class: "img3"
+        = link_to "https://tech-camp.in/expert" do
+          = image_tag 'google-play.svg',class: "img3"
+
+  %section.topKeyFeatures.fadein
+    %h2.head
+      FURIMAの特徴
+    .items
+      %section.item
+        %figure.item__img
+          = image_tag 'icon-01.png'
+        %h3.item__subtitle
+          簡単に売り買いできる
+        %p.item__detail
+          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+      %section.item
+        %figure.item__img
+          = image_tag 'icon-03.png'
+        %h3.item__subtitle
+          売上金は即日振込みに対応
+        %p.item__detail
+          午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+      %section.item
+        %figure.item__img
+          = image_tag 'icon-04.png'
+        %h3.item__subtitle
+          様々な支払いに対応
+        %p.item__detail
+          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+  %section.pickupContainer
+    %h2.head
+      ピックアップカテゴリー
+    .productBox
+      .productHead
+        %h3.title
+          新規投稿商品
+      .productLists
+        = render @items
+  %section.pickupContainer.last
+    %h2.head
+      ピックアップブランド
+    .productBox
+      .productHead
+        %h3.title
+          hogehoge
+      .productLists
+        .list
+          .list__img
+          .list__body
+            %h3.name
+              テスト
+            .details
+              %ul
+                %li
+                  2000円
+                %li
+                  ☆１
+              %p
+                (税込)
+        .list
+          .list__img
+          .list__body
+            %h3.name
+              テスト
+            .details
+              %ul
+                %li
+                  2000円
+                %li
+                  ☆１
+              %p
+                (税込)
+
+        .list
+          .list__img
+          .list__body
+            %h3.name
+              テスト
+            .details
+              %ul
+                %li
+                  2000円
+                %li
+                  ☆１
+              %p
+                (税込)
+%aside.Banner
+  .inner
+    %h2.inner__title
+      だれでもかんたん、人生を変えるフリマアプリ
+    %p.inner__text
+      今すぐ無料ダウンロード！
+    .inner__icon
+      = link_to "https://tech-camp.in/expert" do
+        = image_tag 'app-store.svg',class: "img3"
+      = link_to "https://tech-camp.in/expert" do
+        = image_tag 'google-play.svg',class: "img3"

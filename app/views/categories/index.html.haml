@@ -1,0 +1,25 @@
+- breadcrumb :category_index
+= render 'layouts/breadcrumbs'
+.parent-categories.horizontal-padding-20
+  .parent-categories__title
+    カテゴリー一覧
+  - Category.roots.each do |category|
+    %span.parent-categories__category
+      = link_to category_path(category) do
+        = category.name
+- Category.roots.each do |parent_category|
+  .categories.horizontal-padding-20
+    .parent-category
+      = parent_category.name
+    .parent-category-all
+      = link_to category_path(parent_category) do
+        すべて
+    - parent_category.children.each do |child_category|
+      .child-category
+        %h4
+          = child_category.name
+        .child-category__grand-child-categories
+          = link_to category_path(child_category), class: "child-category__grand-child-categories--category" do
+            すべて
+          - child_category.children.each do |grandchild_category|
+            = link_to grandchild_category.name, category_path(grandchild_category), class: "child-category__grand-child-categories--category"

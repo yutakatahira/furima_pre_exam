@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+    attributes:
+      user:
+        name: イベント名
+        place: 開催場所
+        content: イベント内容
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
+        first_name: 姓（全角）
+        last_name: 名（全角）
+        first_name_reading: 姓カナ（全角）
+        last_name_reading: 名カナ（全角）

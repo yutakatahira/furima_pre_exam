@@ -1,0 +1,14 @@
+.search-list
+  = link_to item_path(item) do 
+    .search-list__img
+      = render partial: 'layouts/sold_out', locals: {item: item}
+      = image_tag item.item_images[0].image.url
+    .search-list__body
+      %h3.name
+        = item.name
+      .details
+        %ul
+          %li
+            #{item.price}円
+        %p
+          (税込)

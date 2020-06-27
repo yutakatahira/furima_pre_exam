@@ -1,0 +1,91 @@
+.mypage {
+  padding: 2rem;
+  display: flex;
+
+  &-main {
+    width: 100%;
+  }
+
+}
+
+.mypage-block {
+  width: 100%;
+  margin-bottom: 2rem;
+
+}
+
+.mypage-block-header {
+  background-color: $white;
+  padding: 1.5rem;
+  font-weight: bold;
+}
+
+.mypage-block-header-user {
+  width: 100%;
+  height: 20rem;
+  background: image-url('mypage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 9rem 0;
+}
+
+.mypage-block-tabs {
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+
+  &__tab {
+    background-color: #eee;
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
+  .active-tab {
+    background-color: $white;
+    border-top: solid 2px red;
+  }
+
+}
+
+.mypage-block-data-list {
+  background-color: $white;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 5rem;
+  text-align: center;
+
+  .text {
+    color: #ccc;
+    position: relative;
+    top: 50%;
+  }
+}
+
+.card-show {
+  display: flex;
+  justify-content: space-between;
+
+  &__data {
+    img {
+      // クレジットカードのアイコン
+      height: 3rem;
+      width: 3rem;
+      display: block;
+    }
+  }
+
+  a {
+    height: 3.6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 3.6rem;
+  }
+}

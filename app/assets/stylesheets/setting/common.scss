@@ -1,0 +1,81 @@
+img {
+  max-width: 100%;
+}
+
+.horizontal-padding-15 {
+  padding-right: 15% !important;
+  padding-left: 15% !important;
+}
+
+.horizontal-padding-20 {
+  padding-right: 20% !important;
+  padding-left: 20% !important;
+}
+
+.horizontal-padding-25 {
+  padding-right: 25% !important;
+  padding-left: 25% !important;
+}
+
+.horizontal-card-padding {
+  padding-right: 25% !important;
+  padding-left: 25% !important;
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
+}
+
+.back-main_color {
+  background-color: $main_color !important;
+  color: $white !important;
+  font-weight: bold !important;
+}
+
+.boder-main_color {
+  border: solid 1px !important;
+  border-color: $main_color !important;
+}
+
+.color-main {
+  color: $main_color !important;
+}
+
+.back-gray {
+  background-color: gray !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.font-white {
+  color: $white !important;
+}
+
+.header-icon {
+  color: $main_color;
+  margin-right: 5px;
+}
+
+.regist-card {
+  color: $white;
+  background-color: $main_color;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+.fadein {
+	opacity : 0;
+	transform : translate(0, 200px);
+	transition : all 500ms;
+}
+.fadein.scrollin {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.breadcrumbs-wrapper {
+  width: 100%;
+  background-color: white;
+  margin-top: 1px;
+  padding: 1rem;
+}

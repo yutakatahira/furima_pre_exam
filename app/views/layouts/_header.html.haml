@@ -1,0 +1,38 @@
+%header.Header
+  .headerInner
+    .mainHeader
+      %h1.icon
+        = link_to root_path do
+          = image_tag 'logo.png',class: "img1"
+      .searchBox
+        = form_with url: item_searches_path, class: "searchBox-form", method: :get, local: true  do |f|
+          .field
+            = f.search_field :name, name: "name_search", placeholder: "何かお探しですか?", class: "searchBox-form__text"
+            = f.hidden_field :name, name: "q[name_search]"
+            = f.label :search_btn, class: "search_btn-label" do
+              = icon "fas", "search"
+              = f.submit "", name: nil, class: "searchBox-form__loupe", id: "search_btn"
+            
+    .nav
+      %nav.l-left
+        %ul.listsLeft
+          %li.listsLeft__item
+            = link_to categories_path do
+              = icon "fas", "list", class:"header-icon"
+              カテゴリーから探す
+          %li.listsLeft__item
+            = icon "fas", "tags", class:"header-icon"
+            ブランドから探す
+      .l-right
+        %ul.listsRight
+          - if user_signed_in?
+            %li.listsRight__item
+              =link_to user_path(current_user) do
+                #{current_user.nickname}さんのマイページ
+          - else
+            %li.listsRight__item.boder-main_color
+              = link_to new_user_session_path, class:"sp-header-btn color-main" do
+                ログイン
+            %li.listsRight__item.back-main_color
+              = link_to select_registration_path,class: "sp-header-btn back-main_color" do
+                新規会員登録
